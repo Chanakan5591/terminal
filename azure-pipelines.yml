@@ -13,7 +13,7 @@ variables:
   solution: '**\OpenConsole.sln'
   buildPlatform: 'x86|x64|ARM64'
   buildConfiguration: 'Release'
-  appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
+  appxPackageDir: '**\dep\packages'
 
 steps:
 - task: NuGetToolInstaller@0
