@@ -36,5 +36,5 @@ steps:
     configuration: 'Release'
     clean: true
     maximumCpuCount: true
-    restoreNugetPackages: true
+    restoreNugetPackages: false
     msbuildArchitecture: 'x64'
