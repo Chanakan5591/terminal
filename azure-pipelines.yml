@@ -13,11 +13,11 @@ variables:
   solution: '**\OpenConsole.sln'
   buildPlatform: 'x86|x64|ARM64'
   buildConfiguration: 'Release'
-  appxPackageDir: '**\dep\packages'
+  appxPackageDir: './dep/packages'
 
 steps:
 - task: NuGetToolInstaller@0
-
+  
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
