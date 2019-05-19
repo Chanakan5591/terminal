@@ -25,7 +25,7 @@ steps:
     feedsToUse: 'select'
     includeNuGetOrg: false
     versioningScheme: 'off'
-    arguments: 'restore d:\a\1\s\OpenConsole.sln -PackagesDirectory d:\a\1\s/packages -Verbosity Detailed -NonInteractive -ConfigFile d:\a\1\s\build\config\NuGet.config'
+    arguments: 'restore d:\a\1\s\build\.nuget\packages.conf -PackagesDirectory d:\a\1\s/packages -Verbosity Detailed -NonInteractive
 
 
 - task: VSBuild@1
