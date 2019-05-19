@@ -14,14 +14,19 @@ variables:
   buildPlatform: 'x86|x64|ARM64'
   buildConfiguration: 'Release'
   NuGetCommand: '-PackagesDirectory d:\a\'
-  appxPackageDir: './dep/packages'
+
 
 steps:
 - task: NuGetToolInstaller@0
   
 - task: NuGetCommand@2
   inputs:
-    restoreSolution: '$(solution)'
+    command: 'custom'
+    feedsToUse: 'select'
+    includeNuGetOrg: false
+    versioningScheme: 'off'
+    arguments: 'restore d:\a\1\s\build\.nuget\packages.config -PackagesDirectory d:\a\1\s/packages -Verbosity Detailed -NonInteractive -ConfigFile d:\a\1\s\build\config\NuGet.config'
+
 
 - task: VSBuild@1
   inputs:
