@@ -10,9 +10,10 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**\OpenConsole.sln'
+  solution: '**\dep\build\.nuget\packages.json'
   buildPlatform: 'x86|x64|ARM64'
   buildConfiguration: 'Release'
+  NuGetCommand: '-PackagesDirectory d:\a\'
   appxPackageDir: './dep/packages'
 
 steps:
